@@ -1,0 +1,139 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+}
+
+.product-details {
+    display: flex;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.product-image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 2vh;
+
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 10px rgba(255, 0, 0, 0.6),
+    0 0 20px rgba(255, 0, 0, 0.4),
+    0 0 30px rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.8);
+}
+
+#productImage {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.product-info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4vh;
+}
+
+.product-details-text {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 1vw;
+}
+
+#productTitle {
+    font-size: 3vh;
+    margin-bottom: 2vh;
+}
+
+#productPrice {
+    font-size: 4vh;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+#productDescription {
+    font-size: 2vh;
+    color: #666;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+}
+
+button {
+    flex: 1;
+    padding: 1.5vh 2vw;
+    font-size: 2vh;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addtoCart {
+    background-color: red;
+    color: white;
+    margin-right: 1vw;
+}
+
+#addtoCart:hover {
+    background-color: rgb(190, 0, 0);
+}
+
+#buyNow {
+    background-color: red;
+    color: white;
+}
+
+#buyNow:hover {
+    background-color: rgb(190, 0, 0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+    }
+
+    .product-image-section,
+    .product-info-section {
+        flex: none;
+    }
+
+    .product-image-section {
+        height: 40vh;
+    }
+
+    .product-info-section {
+        height: 60vh;
+    }
+
+    #productImage {
+        max-height: 35vh;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    button {
+        margin: 1vh 0;
+    }
+}
